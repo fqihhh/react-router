@@ -7,7 +7,7 @@ import About from "./About.jsx";
 import Product from "./Product.jsx";
 import ProductDetail from "./ProductDetail.jsx";
 import Customer from "./Customer.jsx";
-import Sellers from "./Sellers.jsx"; 
+import Sellers from "./Sellers.jsx";
 import Data from "./Data.jsx";
 import DataLayout from "./DataLayout.jsx";
 import Image from "./Image.jsx";
@@ -17,9 +17,11 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home />} />
+    
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/images/*" element={<Image/>}/>  
+        <Route path="/images" element={<Image />} />
+
         <Route path="/data" element={<DataLayout />}>
           <Route index element={<Data />} />
           <Route path="product" element={<Product />} />
@@ -28,7 +30,6 @@ createRoot(document.getElementById("root")).render(
           <Route path="sellers" element={<Sellers />} />
           <Route path="products/search" element={<ProductSearch />} />
         </Route>
-
       </Routes>
     </BrowserRouter>
   </StrictMode>

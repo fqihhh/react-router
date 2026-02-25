@@ -1,5 +1,5 @@
-import {useNavigate, useSearchParams} from "react-router";
-import {    useState} from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
 export default function ProductSearch() {
     const [searchParams] = useSearchParams();
